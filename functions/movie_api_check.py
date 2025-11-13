@@ -1,8 +1,6 @@
 # Local Imports
 from debug_print import debug_print
-
-# External Imports
-import requests
+from mockable_request import mockable_request
 
 ### Logic for checking movie api
 def movie_api_check(headers: dict, working_dir: str, media_id: str, debug: bool = False):
@@ -11,7 +9,7 @@ def movie_api_check(headers: dict, working_dir: str, media_id: str, debug: bool 
 
     # Movie api uses `keywords` as the array containing all of the keywords
     #   https://developer.themoviedb.org/reference/movie-keywords
-    movie_response = requests.get(movie_keywords_uri.format(media_id), headers=headers).json()
+    movie_response = mockable_request(movie_keywords_uri.format(media_id), headers=headers)
     movie_response_keywords = movie_response['keywords']
     movie_keywords = [keywords['name'] for keywords in movie_response_keywords]
 

@@ -1,0 +1,6 @@
+number_of_seasons = 2
+media_is_anime = true
+
+[episodes_per_season]
+1 = 1
+2 = 2

@@ -1,0 +1,51 @@
+name: Run PyTest, Build Dockerfile, & check for Docker vulnerability
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    name: PyTest Framework - Python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.14
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.14
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --root-user-action ignore --upgrade pip
+          pip install --root-user-action ignore pytest
+          pip install --root-user-action ignore -r requirements.txt
+
+      - name: Test with PyTest
+        run: pytest --junit-xml=tests/Reports/Report.html
+
+      - name: Test Report Generation
+        uses: actions/upload-artifact@v4
+        if: success() || failure()
+        with:
+          name: Pytest Report           # Name of the folder
+          path: tests/Reports           # Path to test results
+  docker_build:
+    needs: pytest
+    name: Build & Test Docker
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build an image from Dockerfile
+      run: docker build -t docker.io/crystalenvt/movarr:${{ github.sha }} .
+
+    - name: Run Trivy vulnerability scanner
+      uses: aquasecurity/trivy-action@0.28.0
+      with:
+        image-ref: 'docker.io/crystalenvt/movarr:${{ github.sha }}'
+        format: 'table'
+        exit-code: '1'
+        ignore-unfixed: true
+        vuln-type: 'os,library'
+        severity: 'CRITICAL,HIGH'

@@ -16,6 +16,10 @@ import pytest
         'given_current_working_dir,expected',
         [
             (
+                '{}/testdata/uncached',
+                {'is_cached': False, 'is_complete': False},
+            ),
+            (
                 '{}/testdata/cached_incomplete_1',
                 {'is_cached': True, 'is_complete': False},
             ),

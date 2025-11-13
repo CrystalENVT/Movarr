@@ -1,9 +1,12 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices"
+  "extends": ["config:best-practices"],
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "matchManagers": ["python", "docker"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
   ],
-  "enabledManagers": [
-    "python", "docker"
-  ]
+  "vulnerabilityAlerts": {"enabled": true}
 }

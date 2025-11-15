@@ -14,9 +14,8 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     tv_details_uri = "https://api.themoviedb.org/3/tv/{}"
     tv_keywords_uri = "https://api.themoviedb.org/3/tv/{}/keywords"
 
-    tv_details_response = requests.get(movie_keywords_uri.format(media_id), headers=headers).json()
-    # This below one might be too beefy for general debug logs
-    # debug_print('TV_details_Response: {}'.format(tv_details_response), debug)
+    tv_details_response = requests.get(tv_details_uri.format(media_id), headers=headers).json()
+    debug_print('TV_details_Response: {}'.format(tv_details_response), debug)
 
     seasons_array = tv_details_response['seasons']
 
@@ -29,7 +28,7 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
             episodes_per_season[str(season['season_number'])] = season['episode_count']
     debug_print(episodes_per_season, debug)
 
-    tv_response = requests.get(movie_keywords_uri.format(media_id), headers=headers).json()
+    tv_response = requests.get(tv_keywords_uri.format(media_id), headers=headers).json()
 
     # TV api uses `results` as the array containing all of the keywords
     #   https://developer.themoviedb.org/reference/tv-series-keywords
@@ -52,8 +51,10 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     with open('{}/{}_cache.toml'.format(current_working_dir, media_id), 'w') as cache_file:
         cache_file.write(cache_toml_string)
 
+    debug_print('media_id: {} | Current Working Dir: {}'.format(media_id, current_working_dir), debug)
     # We'll go ahead & run the cache check, instead of re-writing logic
     cache_response = local_cache_check(current_working_dir, media_id, debug)
+    print("foo")
 
     if cache_response.get('is_complete') == True:
         return # This directory has now been moved, so no need to do further checks

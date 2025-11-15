@@ -1,0 +1,53 @@
+{
+  "id": 60846,
+  "results": [
+    {
+      "name": "magic",
+      "id": 2343
+    },
+    {
+      "name": "virtual reality",
+      "id": 4563
+    },
+    {
+      "name": "alternative reality",
+      "id": 175629
+    },
+    {
+      "name": "rpg",
+      "id": 204047
+    },
+    {
+      "name": "shounen",
+      "id": 207826
+    },
+    {
+      "name": "anime",
+      "id": 210024
+    },
+    {
+      "name": "isekai",
+      "id": 237451
+    },
+    {
+      "name": "trapped in a game",
+      "id": 269958
+    },
+    {
+      "name": "fantasy",
+      "id": 293198
+    },
+    {
+      "name": "based on light novel",
+      "id": 319900
+    },
+    {
+      "name": "adventure",
+      "id": 322942
+    },
+    {
+      "name": "vrmmo",
+      "id": 345062
+    }
+  ]
+}

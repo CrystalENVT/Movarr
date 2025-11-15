@@ -1,10 +1,10 @@
 # Local Imports
 from debug_print import debug_print
 from local_cache_check import local_cache_check
-from mockable_request import mockable_request
 
 # External Imports
 import os
+import requests
 import toml
 
 ### Logic for checking tv api
@@ -14,7 +14,7 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     tv_details_uri = "https://api.themoviedb.org/3/tv/{}"
     tv_keywords_uri = "https://api.themoviedb.org/3/tv/{}/keywords"
 
-    tv_details_response = mockable_request(tv_details_uri.format(media_id), headers=headers)
+    tv_details_response = requests.get(movie_keywords_uri.format(media_id), headers=headers).json()
     # This below one might be too beefy for general debug logs
     # debug_print('TV_details_Response: {}'.format(tv_details_response), debug)
 
@@ -29,7 +29,7 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
             episodes_per_season[str(season['season_number'])] = season['episode_count']
     debug_print(episodes_per_season, debug)
 
-    tv_response = mockable_request(tv_keywords_uri.format(media_id), headers=headers)
+    tv_response = requests.get(movie_keywords_uri.format(media_id), headers=headers).json()
 
     # TV api uses `results` as the array containing all of the keywords
     #   https://developer.themoviedb.org/reference/tv-series-keywords

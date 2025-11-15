@@ -57,8 +57,12 @@ def local_cache_check(current_working_dir: str, media_id: str, debug: bool = Fal
             elif os.path.isdir(file_name):
                 debug_print('Checking folder: {}'.format(i), debug)
 
-                if i.split(' ')[1].isdigit():
+                if len(i.split(' ')) >= 1 and i.split(' ')[1].isdigit():
                     season_number = int(i.split(' ')[1])
+                else:
+                    # This is for specials. Should be the 'Specials' folder,
+                    #   but leaving this generic for flexibility
+                    season_number = 0
                 debug_print('Parsed Season Number: {}'.format(season_number), debug)
 
                 number_of_episodes = len(os.listdir('{}/{}'.format(current_working_dir, i)))

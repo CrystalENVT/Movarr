@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "config:best-practices",
+    ":prHourlyLimitNone",
+    ":approveMajorUpdates",
+    ":automergeMinor",
+    ":automergeDigest"
+  ],
+  "dependencyDashboardApproval": false,
+  "osvVulnerabilityAlerts": true,
+  "packageRules": [
+    {
+      "matchManagers": ["python", "docker"],
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    }
+  ],
+  "vulnerabilityAlerts": {"enabled": true},
+  "branchConcurrentLimit": 5,
+  /**
+   * Use 'renovate-' instead of 'renovate/' for branch naming
+   *   to prevent docker builds from breaking
+   *   (slashes are not allowed in tags)
+   */
+  "branchPrefix": "renovate-"
+}

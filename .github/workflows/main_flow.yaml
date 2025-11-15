@@ -11,9 +11,9 @@ jobs:
     name: PyTest Framework - Python
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
       - name: Set up Python 3.14
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@7f4fc3e22c37d6ff65e88745f38bd3157c663f7c # v4
         with:
           python-version: 3.14
 
@@ -27,7 +27,7 @@ jobs:
         run: pytest --html=tests/Report.html --self-contained-html
 
       - name: PyTest Report Generation
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         if: success() || failure()
         with:
           name: Pytest_Report           # Name of the folder
@@ -37,12 +37,12 @@ jobs:
     name: Build & Test Docker
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
     - name: Build image from Dockerfile
       run: docker build -t docker.io/crystalenvt/movarr:${{ github.sha }} .
 
     - name: Run Trivy vulnerability scanner against built image
-      uses: aquasecurity/trivy-action@0.28.0
+      uses: aquasecurity/trivy-action@915b19bbe73b92a6cf82a1bc12b087c9a19a5fe2 # 0.28.0
       with:
         image-ref: 'docker.io/crystalenvt/movarr:${{ github.sha }}'
         format: 'table'

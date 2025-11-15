@@ -6,7 +6,7 @@ sys.path.append('./functions')
 from debug_print import debug_print
 from local_cache_check import local_cache_check
 from movie_api_check import movie_api_check
-from movie_or_show_check import movie_or_show_check
+from movie_or_tv_check import movie_or_tv_check
 from tv_api_check import tv_api_check
 from debug_print import debug_print
 
@@ -35,7 +35,7 @@ def process_media(headers: dict, current_input_dir: str, subdir: str, debug: boo
         print('Directory is cached but not yet complete: {}'.format(i))
         return # This directory has a cache file, so we don't need to do another API call
 
-    media_type_response = movie_or_show_check(headers, current_working_dir, media_id, debug)
+    media_type_response = movie_or_tv_check(headers, current_working_dir, media_id, debug)
 
     if media_type_response == 'movie':
         movie_api_check(headers, current_working_dir, media_id, debug)

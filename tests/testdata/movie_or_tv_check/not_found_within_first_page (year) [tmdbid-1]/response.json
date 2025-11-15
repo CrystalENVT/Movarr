@@ -1,0 +1,620 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": true,
+      "id": 1854298,
+      "name": "Flower",
+      "original_name": "Flower",
+      "media_type": "person",
+      "popularity": 1.4,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/jv9Dn220nbvrcncyXJ0e0wPCnli.jpg",
+      "known_for": [
+        {
+          "adult": true,
+          "backdrop_path": "/eBjmq0cjwhmJYfkY3hilt5Rrvoz.jpg",
+          "id": 34617,
+          "title": "Pretty Peaches",
+          "original_title": "Pretty Peaches",
+          "overview": "After attending her father's wedding, Peaches crashes her jeep in the forest only to wake up with complete amnesia. She is quickly rescued by two manipulative men who hope to sell her back to her family for a hefty ransom.",
+          "poster_path": "/lE6TFkudwnF3ulhD2Qwl6tjPcYS.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            27
+          ],
+          "popularity": 0.0,
+          "release_date": "1978-11-23",
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 36
+        },
+        {
+          "adult": true,
+          "backdrop_path": null,
+          "id": 566287,
+          "title": "The Other Side of Julie",
+          "original_title": "The Other Side of Julie",
+          "overview": "Julie's husband Mike has an extraordinary lifestyle - a white Rolls-Royce Corniche convertible, a large business, a magnificent home, and a side line that Julie knows nothing about. He selects lovely young women at random, and makes the following proposition: he will supply the financial backing for a new business partnership and in return the girls supply him with a share of the profits and unlimited sex! When Julie finally discovers Mike's sham, she turns the tables and takes over.",
+          "poster_path": "/uMxIFlajLJO91OkPK3tgPQBeBMt.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.0,
+          "release_date": "1978-07-06",
+          "video": false,
+          "vote_average": 6.0,
+          "vote_count": 1
+        },
+        {
+          "adult": true,
+          "backdrop_path": null,
+          "id": 754360,
+          "title": "Legends of Porn II",
+          "original_title": "Legends of Porn II",
+          "overview": "Compilation video",
+          "poster_path": "/82xbCBbeH3tRFPVFUlYeCrL4nuo.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0,
+          "release_date": "1989-01-01",
+          "video": true,
+          "vote_average": 0.0,
+          "vote_count": 0
+        }
+      ]
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lcgaDmokrKltbgwQu9Wf6X0qPTE.jpg",
+      "id": 421471,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "Rebellious, quick-witted Erica Vandross is a 17-year-old firecracker living with her single mom, Laurie, and her mom's new boyfriend, Bob, in L.A.'s San Fernando Valley. When Bob's mentally unbalanced son, Luke, arrives from rehab to live with the family, Erica finds her domestic and personal life overwhelmed. With Luke and her sidekicks Kala and Claudine in tow, Erica acts out by exposing a high school teacher's dark secret.",
+      "poster_path": "/xYTI11qFnmx39LRhDOsGEabfqtp.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "popularity": 2.7412,
+      "release_date": "2017-03-16",
+      "video": false,
+      "vote_average": 6.348,
+      "vote_count": 273
+    },
+    {
+      "adult": false,
+      "id": 2381756,
+      "name": "Flower",
+      "original_name": "Flower",
+      "media_type": "person",
+      "popularity": 0.0143,
+      "gender": 0,
+      "known_for_department": "Acting",
+      "profile_path": "/5rPjfDyisYoi1RM9Ki1ERMIUg4g.jpg",
+      "known_for": []
+    },
+    {
+      "adult": false,
+      "id": 5244855,
+      "name": "Flower",
+      "original_name": "Flower",
+      "media_type": "person",
+      "popularity": 0.0143,
+      "gender": 0,
+      "known_for_department": "Acting",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/dShgk9haT81svMVmtiNSDgxE7tK.jpg",
+          "id": 1433708,
+          "title": "All In",
+          "original_title": "All In",
+          "overview": "A short film that takes place during a tense game of poker between four players, and the progressively steeper bets that are made.",
+          "poster_path": "/3EHgEosQ9kX0SNn2wI3IY3bRmRa.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [],
+          "popularity": 0.0143,
+          "release_date": "",
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        }
+      ]
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wxtgS3rClMtFB82LI4IYWTIOdtx.jpg",
+      "id": 1510423,
+      "title": "flower",
+      "original_title": "flower",
+      "overview": "Ingrid wakes to find a flower left upon her bedside table every morning, with no knowledge of how it got there. She begins to spiral, filming herself sleeping and reporting the peculiar occurrence to the police in the hopes to find out exactly who could be leaving her this terrifying gift.",
+      "poster_path": "/3Ue9Z3uHtStR5rPwZisYWDQdtG6.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        27,
+        53
+      ],
+      "popularity": 0.6854,
+      "release_date": "2023-10-31",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 1182626,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "Zip, a character made from found objects, finds a \"broken\" flower and tries to fix it while his friends look on.",
+      "poster_path": "/q0H4Vg4fmlpQtbuN0SWPyN10E8i.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        16,
+        878
+      ],
+      "popularity": 0.2549,
+      "release_date": "",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 1510582,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "The film uses the original ecological cultural form of Kazakh improvisational singing and playing, \"Aytes\", and grassland life as the narrative background, telling an aesthetic story full of strong Kazakh flavour, focusing on shaping the life, emotions, and struggles of a female singer \"Flower\" with a strong character, kindness, and intelligence. The film also presents the audience with Xinjiang's magnificent mountains and rivers, gorgeous grasslands, and ice and snow world. The film is loved by many viewers. Everyone believes that the music and pictures vividly express the traditional cultural life of the Kazakh people, allowing the audience to deeply appreciate the Kazakh people's love for life.",
+      "poster_path": "/zeJgt73PEfkY8sgJefI3q7knl95.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 0.051,
+      "release_date": "2011-01-01",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 239670,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "A granny, who was once a beautiful young girl, is now an old lady. Her final days are here. She wants to relive the most beautiful moment of her life.",
+      "poster_path": null,
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 0.0486,
+      "release_date": "2006-01-30",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 832138,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "A man has trouble sleeping during quarantine.",
+      "poster_path": "/vYyvBIJOGbeE83ZZ51XkC2K7wef.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [],
+      "popularity": 0.0505,
+      "release_date": "",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 1132587,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "World-renowned ballerina Misty Copeland stars in her first independently produced short art film, an immersive experience in movement storytelling that highlights intergenerational equity in the community of Oakland, California, featuring new, original music from Grammy-winning recording artist Raphael Saadiq.",
+      "poster_path": "/ebV6vWRYjlssYuvpfHewg2qifp1.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 0.0286,
+      "release_date": "2023-06-10",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 220051,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "Naoko Tasaka's sphinx-like Flower unfolds like a children's story before it plumbs the depths of both a physical and metaphorical surface, as straightforward narration gives way to sublimated abstraction. Employing a number of multi-format techniques, Flower displays a compelling, duelling impulse that hovers between a grid and a waterfall.",
+      "poster_path": "/y2kXBjn5NQEOx2pwX9LFfbe6gZr.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [],
+      "popularity": 0.1176,
+      "release_date": "2013-03-21",
+      "video": false,
+      "vote_average": 5.8,
+      "vote_count": 4
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "id": 281017,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "Liana is a newly transferred teacher, who is finding the transition a lonely one, until someone mysteriously starts sending her a flower every day. There's only one way to catch the secret admirer, red handed.",
+      "poster_path": null,
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 0.0143,
+      "release_date": "",
+      "video": false,
+      "vote_average": 4.2,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uSjphKxlqmVnqmsES24eDqnhHu9.jpg",
+      "id": 1463209,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "A creature, alone and sad on his ice floe, who wants to see his situation change. We follow his journey against a backdrop of icy, chilling Arctic landscapes.",
+      "poster_path": "/dGNfrsIh5XfRehJZa52aSSgLkNO.jpg",
+      "media_type": "movie",
+      "original_language": "fr",
+      "genre_ids": [
+        16
+      ],
+      "popularity": 0.0261,
+      "release_date": "2024-01-01",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": true,
+      "backdrop_path": "/4eddoqI9Z2KlAHLyHC4y3AZja70.jpg",
+      "id": 483398,
+      "title": "Flower",
+      "original_title": "Flower",
+      "overview": "A dreamy sexual lullaby in which five friends spend time together redefining the line between intimacy and friendship.",
+      "poster_path": "/je9dnKJ7OywRhcqUhUrQ8gHnG6e.jpg",
+      "media_type": "movie",
+      "original_language": "en",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "popularity": 0.0,
+      "release_date": "2017-10-28",
+      "video": false,
+      "vote_average": 6.333,
+      "vote_count": 6
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3hqvHUsc2DuKZbaprDg7XYvgQEC.jpg",
+      "id": 708522,
+      "title": "flower",
+      "original_title": "flower",
+      "overview": "Animation by Oh Chearin. Music by Suzuka Fujimura.",
+      "poster_path": "/dxGo4rcAMMR61MjaccafxcrPRa7.jpg",
+      "media_type": "movie",
+      "original_language": "ja",
+      "genre_ids": [
+        16,
+        10749,
+        14
+      ],
+      "popularity": 0.0256,
+      "release_date": "2020-05-20",
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dl3pdT1NZiqRM4aDBwsD2TtO8x9.jpg",
+      "id": 271607,
+      "name": "The Fragrant Flower Blooms with Dignity",
+      "original_name": "薫る花は凛と咲く",
+      "overview": "When the intimidating Rintaro meets the open-minded Kaoruko, the unlikely duo grows closer. The issue? Their neighboring high schools hate each other.",
+      "poster_path": "/g1sYAQt0OeCxzyfagSEqxUlsLnt.jpg",
+      "media_type": "tv",
+      "original_language": "ja",
+      "genre_ids": [
+        16,
+        18
+      ],
+      "popularity": 25.2287,
+      "first_air_date": "2025-07-06",
+      "vote_average": 8.804,
+      "vote_count": 116,
+      "origin_country": [
+        "JP"
+      ]
+    },
+    {
+      "adult": true,
+      "id": 232290,
+      "name": "Flower Edwards",
+      "original_name": "Flower Edwards",
+      "media_type": "person",
+      "popularity": 7.433,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/9AWIHsuXVWnVL4d1A07821vM2oN.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 451555,
+          "title": "The Sex Substitute",
+          "original_title": "The Sex Substitute",
+          "overview": "A guy house-sitting at a home based women's spa finds himself providing erotic services to female clients who mistake him for the substitute therapist.",
+          "poster_path": "/2Ps26LsBWnmCa27qAzzbAa1YteJ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            35
+          ],
+          "popularity": 3.323,
+          "release_date": "2001-01-01",
+          "video": false,
+          "vote_average": 5.208,
+          "vote_count": 12
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xoh46w5dswErq6Dn6OY7LiYWaIW.jpg",
+          "id": 223461,
+          "title": "Andromina: The Pleasure Planet",
+          "original_title": "Andromina: The Pleasure Planet",
+          "overview": "Three adventurous space pilots voyage to the all-female planet Andromina, looking forward to the most famous pleasure planet in the galaxy. When they arrive they find that all the women have disappeared, and it's up to them to figure out where the fun has gone.",
+          "poster_path": "/qujAorhWjAuO2nQvMO5uZ5RMm2V.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10749,
+            878,
+            35,
+            14,
+            27
+          ],
+          "popularity": 1.1069,
+          "release_date": "1999-08-06",
+          "video": false,
+          "vote_average": 3.633,
+          "vote_count": 15
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 18637,
+          "title": "Private Call",
+          "original_title": "Private Call",
+          "overview": "In order to avenge the murder of an old friend, a recently suspended female police officer goes undercover at an illegal gambling den where the winning prize is a night with one of the female staff.",
+          "poster_path": "/qnyQMspiGsjeXRc7UQO4dU6ZRNk.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            10770
+          ],
+          "popularity": 1.622,
+          "release_date": "2002-04-12",
+          "video": false,
+          "vote_average": 3.95,
+          "vote_count": 10
+        }
+      ]
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/d3YL9PsQRHyrPXpcqkoDBjXwsfW.jpg",
+      "id": 219290,
+      "name": "Blood Flowers",
+      "original_name": "Kan Çiçekleri",
+      "overview": "The narrative of Dilan, whose aspirations and hopes were dashed on the one hand, and Baran, who had to marry to stop the feud and save her brother from this cycle on the other. This marriage, however, is a prison for the two of them, and his uncle, who is jealous of his wealth, wishes to renew the rivalry. This conflicted relationship will cause strong winds to blow between two hearts; will this marriage become a true marriage?",
+      "poster_path": "/o6tosm7V0SMBlI1KsTUxPM9Papp.jpg",
+      "media_type": "tv",
+      "original_language": "tr",
+      "genre_ids": [
+        18
+      ],
+      "popularity": 16.8808,
+      "first_air_date": "2022-12-05",
+      "vote_average": 7.6,
+      "vote_count": 23,
+      "origin_country": [
+        "TR"
+      ]
+    },
+    {
+      "adult": false,
+      "id": 1465051,
+      "name": "Aiden Flowers",
+      "original_name": "Aiden Flowers",
+      "media_type": "person",
+      "popularity": 0.6296,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/gKW6jxWfsiYGkKXNBfu2ZEylI2S.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/ld7V9BjMk2xtiBNcR8savyyk5ca.jpg",
+          "id": 283366,
+          "title": "Miss Peregrine's Home for Peculiar Children",
+          "original_title": "Miss Peregrine's Home for Peculiar Children",
+          "overview": "A teenager finds himself transported to an island where he must help protect a group of orphans with special powers from creatures intent on destroying them.",
+          "poster_path": "/CIlbMFOfYDj0MP23hsIYhFGrL6.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            12,
+            18,
+            10751
+          ],
+          "popularity": 6.2607,
+          "release_date": "2016-09-27",
+          "video": false,
+          "vote_average": 6.837,
+          "vote_count": 10281
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gUSsV6rm2EA1TZ62f6frGgxqKJa.jpg",
+          "id": 318846,
+          "title": "The Big Short",
+          "original_title": "The Big Short",
+          "overview": "The men who made millions from a global economic meltdown.",
+          "poster_path": "/scVEaJEwP8zUix8vgmMoJJ9Nq0w.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "popularity": 9.6677,
+          "release_date": "2015-12-11",
+          "video": false,
+          "vote_average": 7.358,
+          "vote_count": 9477
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8LYxSH8ZJzKbS3kNIELsVc05RNH.jpg",
+          "id": 287424,
+          "title": "Maggie",
+          "original_title": "Maggie",
+          "overview": "There's a deadly zombie epidemic threatening humanity, but Wade, a small-town farmer and family man, refuses to accept defeat even when his daughter Maggie becomes infected. As Maggie's condition worsens and the authorities seek to eradicate those with the virus, Wade is pushed to the limits in an effort to protect her. Joely Richardson co-stars in this post-apocalyptic thriller.",
+          "poster_path": "/twa9gXjocLM629sJrQYVtmF306R.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            27,
+            18,
+            878
+          ],
+          "popularity": 4.8149,
+          "release_date": "2015-05-08",
+          "video": false,
+          "vote_average": 5.4,
+          "vote_count": 1639
+        }
+      ]
+    },
+    {
+      "adult": false,
+      "id": 59703,
+      "name": "Frank E. Flowers",
+      "original_name": "Frank E. Flowers",
+      "media_type": "person",
+      "popularity": 0.1473,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/eguppPFKy8xfEOajWrbHugA0uJ.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/6HIJVGWxEwGFBvv0PCM5lgc9ZKC.jpg",
+          "id": 158091,
+          "title": "Metro Manila",
+          "original_title": "Metro Manila",
+          "overview": "Looking for a brighter future in metropolitan Manila, Oscar Ramirez and his family leave their miserable life in the rice terraces of Banaue, in the northern Philippines. In the sweltering capital, where all kind of perils lurk in every corner, Oscar catches a lucky break when he is offered a steady work for an armored truck company and the senior officer Ong takes him under his wing.",
+          "poster_path": "/o3HLYPfgNK1N04TqZSOU4Hv4iaq.jpg",
+          "media_type": "movie",
+          "original_language": "tl",
+          "genre_ids": [
+            80,
+            53,
+            18,
+            28
+          ],
+          "popularity": 2.4207,
+          "release_date": "2013-07-17",
+          "video": false,
+          "vote_average": 7.2,
+          "vote_count": 164
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kGinxaX9yrpfKqYAxRpdVFUcEAH.jpg",
+          "id": 9830,
+          "title": "Haven",
+          "original_title": "Haven",
+          "overview": "During a weekend, two shady businessmen flee to the Cayman Islands to avoid federal prosecution. But their escape ignites a chain reaction that leads a British native to commit a crime that changes the nation.",
+          "poster_path": "/cV6rQ2wPN5I58d34DHyFAmO36BF.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "popularity": 4.7383,
+          "release_date": "2004-09-10",
+          "video": false,
+          "vote_average": 5.191,
+          "vote_count": 102
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fMRrTziefy0c6v45IUyByGjZCRo.jpg",
+          "id": 970284,
+          "title": "Shooting Stars",
+          "original_title": "Shooting Stars",
+          "overview": "The inspiring origin story of a basketball superhero, revealing how LeBron James and his childhood friends become the #1 high school team in the country, launching James's breathtaking career as a four-time NBA Champion, two-time Olympic Gold Medalist and the NBA's all-time leading scorer.",
+          "poster_path": "/zLQHNW0XVT7IWjUahBlpVSba3sC.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 4.2653,
+          "release_date": "2023-06-02",
+          "video": false,
+          "vote_average": 7.725,
+          "vote_count": 153
+        }
+      ]
+    }
+  ],
+  "total_pages": 118,
+  "total_results": 2356
+}

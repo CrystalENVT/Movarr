@@ -6,7 +6,7 @@ import requests
 import urllib.parse
 
 ### Determine if the media folder is related to movies or shows
-def movie_or_show_check(headers: dict, working_dir: str, media_id: str, debug: bool = False) -> str:
+def movie_or_tv_check(headers: dict, working_dir: str, media_id: str, debug: bool = False) -> str:
     search_uri = "https://api.themoviedb.org/3/search/multi?query={}&include_adult=true"
 
     # Extract media title for search from the media directory
@@ -15,7 +15,7 @@ def movie_or_show_check(headers: dict, working_dir: str, media_id: str, debug: b
     # URL-Encode the media title, incase it has special characters
     formatted_search_uri = search_uri.format(urllib.parse.quote(media_search_term))
 
-    search_response = requests.get(movie_keywords_uri.format(media_id), headers=headers).json()
+    search_response = requests.get(search_uri.format(media_id), headers=headers).json()
     debug_print('Search Response: {}'.format(search_response), debug)
     search_response_results = search_response['results']
     debug_print('Search Response Results: {}'.format(search_response_results), debug)

@@ -111,7 +111,7 @@ if __name__ == '__main__':
     killer = GracefulKiller()
     while not killer.kill_now:
         if pycron.is_now(os.getenv('run_schedule')):
-            print('>>>> Movarr - starting processing batch')
+            print('>>>> Movarr - starting processing batch', flush=True)
             input_directories = os.getenv('input_directories').replace('~',os.getenv('HOME')).split(';')
             debug_print("Input Directories: {}".format(input_directories), DEBUG_FLAG)
 

@@ -17,6 +17,8 @@ def movie_or_tv_check(headers: dict, working_dir: str, media_id: str, debug: boo
     # URL-Encode the media title, incase it has special characters
     formatted_search_uri = search_uri.format(urllib.parse.quote(media_search_term))
 
+    debug_print('[MOTC] - Search URI: {}'.format(formatted_search_uri), debug)
+
     search_response = requests.get(search_uri.format(media_id), headers=headers).json()
     debug_print('[MOTC] - Search Response: {}'.format(search_response), debug)
     search_response_results = search_response['results']

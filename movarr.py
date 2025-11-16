@@ -12,9 +12,21 @@ from debug_print import debug_print
 
 # External Imports
 import os
+import pycron
+import signal
+import time
 
 # From Imports
 from dotenv import load_dotenv
+
+class GracefulKiller:
+  kill_now = False
+  def __init__(self):
+    signal.signal(signal.SIGINT, self.exit_gracefully)
+    signal.signal(signal.SIGTERM, self.exit_gracefully)
+
+  def exit_gracefully(self, signum, frame):
+    self.kill_now = True
 
 # Primary functional flow for processing the media
 #   Calls the other functions
@@ -48,6 +60,36 @@ def process_media(headers: dict, current_input_dir: str, subdir: str, debug: boo
 ### MAIN FUNCTION STARTS HERE ###
 #################################
 
+# This will be printed at startup
+####################################################################
+#                                                                  #
+#  $$\      $$\                                                    #
+#  $$$\    $$$ |                                                   #
+#  $$$$\  $$$$ | $$$$$$\ $$\    $$\ $$$$$$\   $$$$$$\   $$$$$$\    #
+#  $$\$$\$$ $$ |$$  __$$\\$$\  $$  |\____$$\ $$  __$$\ $$  __$$\   #
+#  $$ \$$$  $$ |$$ /  $$ |\$$\$$  / $$$$$$$ |$$ |  \__|$$ |  \__|  #
+#  $$ |\$  /$$ |$$ |  $$ | \$$$  / $$  __$$ |$$ |      $$ |        #
+#  $$ | \_/ $$ |\$$$$$$  |  \$  /  \$$$$$$$ |$$ |      $$ |        #
+#  \__|     \__| \______/    \_/    \_______|\__|      \__|        #
+#                                                                  #
+####################################################################
+
+
+print("\n" +
+"####################################################################\n"+
+"#                                                                  #\n"+
+"#  $$\\      $$\\                                                    #\n"+
+"#  $$$\\    $$$ |                                                   #\n"+
+"#  $$$$\\  $$$$ | $$$$$$\\ $$\\    $$\\ $$$$$$\\   $$$$$$\\   $$$$$$\\    #\n"+
+"#  $$\\$$\\$$ $$ |$$  __$$\\$$\\   $$  |\\____$$\\ $$  __$$\\ $$  __$$\\   #\n"+
+"#  $$ \\$$$  $$ |$$ /  $$ |\\$$\\$$  / $$$$$$$ |$$ |  \\__|$$ |  \\__|  #\n"+
+"#  $$ |\\$  /$$ |$$ |  $$ | \\$$$  / $$  __$$ |$$ |      $$ |        #\n"+
+"#  $$ | \\_/ $$ |\\$$$$$$  |  \\$  /  \\$$$$$$$ |$$ |      $$ |        #\n"+
+"#  \\__|     \\__| \\______/    \\_/    \\_______|\\__|      \\__|        #\n"+
+"#                                                                  #\n"+
+"####################################################################\n"+
+"\n")
+
 # key-value pairs from .env get loaded into the os environment
 load_dotenv()
 
@@ -59,12 +101,27 @@ if 'DEBUG' in os.environ and os.getenv('DEBUG') == "true":
 # setup headers for tmdb api calls
 headers = {"Authorization": "Bearer {}".format(os.getenv('tmdb_v4_read_access_token'))}
 
-input_directories = os.getenv('input_directories').replace('~',os.getenv('HOME')).split(';')
-debug_print("Input Directories: {}".format(input_directories), DEBUG_FLAG)
+if not 'run_schedule' in os.environ:
+    print('>>>> run_schedule environment variable is required')
+    sys.exit()
 
-for current_input_dir in input_directories:
-    subdirectories = os.listdir(current_input_dir)
-    for i in subdirectories:
-        if not 'tmdbid' in i:
-            continue
-        process_media(headers, current_input_dir, i, DEBUG_FLAG)
+print(">>>> Movarr is initialized, starting monitor:")
+
+if __name__ == '__main__':
+    killer = GracefulKiller()
+    while not killer.kill_now:
+        if pycron.is_now(os.getenv('run_schedule')):
+            print('>>>> Movarr - starting processing batch')
+            input_directories = os.getenv('input_directories').replace('~',os.getenv('HOME')).split(';')
+            debug_print("Input Directories: {}".format(input_directories), DEBUG_FLAG)
+
+            for current_input_dir in input_directories:
+                subdirectories = os.listdir(current_input_dir)
+                for i in subdirectories:
+                    if not 'tmdbid' in i:
+                        continue
+                    process_media(headers, current_input_dir, i, DEBUG_FLAG)
+
+            time.sleep(60) # prevent running multiple times in 1 minute
+        else:
+            time.sleep(1)

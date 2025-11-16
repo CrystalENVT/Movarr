@@ -15,7 +15,7 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     tv_keywords_uri = "https://api.themoviedb.org/3/tv/{}/keywords"
 
     tv_details_response = requests.get(tv_details_uri.format(media_id), headers=headers).json()
-    debug_print('TV_details_Response: {}'.format(tv_details_response), debug)
+    debug_print('[TAC] - TV_details_Response: {}'.format(tv_details_response), debug)
 
     seasons_array = tv_details_response['seasons']
 
@@ -26,7 +26,7 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     for season in seasons_array:
         if (season['season_number'] != 0) or ('include_specials' in os.environ and os.getenv('include_specials') == "true"):
             episodes_per_season[str(season['season_number'])] = season['episode_count']
-    debug_print(episodes_per_season, debug)
+    debug_print('[TAC] - Episodes Per Season: {}'.format(episodes_per_season), debug)
 
     tv_response = requests.get(tv_keywords_uri.format(media_id), headers=headers).json()
 
@@ -39,8 +39,8 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     if 'anime' in tv_keywords:
         media_is_anime = True
 
-    debug_print("ID {} - TV Keywords: {}".format(media_id, tv_keywords), debug)
-    debug_print("ID {} is Anime (After TV): {}".format(media_id, media_is_anime), debug)
+    debug_print('[TAC] - ID {} - TV Keywords: {}'.format(media_id, tv_keywords), debug)
+    debug_print('[TAC] - ID {} is Anime (After TV): {}'.format(media_id, media_is_anime), debug)
 
     new_cache_data = {'number_of_seasons': number_of_seasons, 'episodes_per_season': episodes_per_season, 'media_is_anime': media_is_anime}
     debug_print(new_cache_data, debug)
@@ -51,10 +51,9 @@ def tv_api_check(headers, current_working_dir, media_id, debug=False):
     with open('{}/{}_cache.toml'.format(current_working_dir, media_id), 'w') as cache_file:
         cache_file.write(cache_toml_string)
 
-    debug_print('media_id: {} | Current Working Dir: {}'.format(media_id, current_working_dir), debug)
+    debug_print('[TAC] - media_id: {} | Current Working Dir: {}'.format(media_id, current_working_dir), debug)
     # We'll go ahead & run the cache check, instead of re-writing logic
     cache_response = local_cache_check(current_working_dir, media_id, debug)
-    print("foo")
 
     if cache_response.get('is_complete') == True:
         return # This directory has now been moved, so no need to do further checks

@@ -20,7 +20,7 @@ def movie_api_check(headers: dict, current_working_dir: str, media_id: str, debu
     if 'anime' in movie_keywords:
         media_is_anime = True
 
-    debug_print("ID {} - Movie Keywords: {}".format(media_id, movie_keywords), debug)
-    debug_print("ID {} is Anime (After Movie): {}".format(media_id, media_is_anime), debug)
+    debug_print("[MAC] - ID {} - Movie Keywords: {}".format(media_id, movie_keywords), debug)
+    debug_print("[MAC] - ID {} is Anime (After Movie): {}".format(media_id, media_is_anime), debug)
 
     move_media_folder(current_working_dir, 'movie', media_is_anime)

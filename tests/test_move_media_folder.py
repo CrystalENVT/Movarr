@@ -47,4 +47,4 @@ def test_move_media_folder(given_media_type: str, given_media_is_anime: bool, mo
         given_media_type,
         given_media_is_anime
         )
-    mocked_shutil.assert_called_with(given_media_type, 'shutil')
+    mocked_shutil.assert_called_with(given_media_type, 'shutil/{}'.format(given_media_type))

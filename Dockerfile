@@ -11,12 +11,4 @@ RUN pip install --root-user-action ignore -r requirements.txt
 COPY ./movarr.py /app/
 COPY ./functions/* /app/functions/
 
-ENV DEBIAN_FRONTEND="noninteractive"
-# This will always run, so do this near the end
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends tini && \
-    rm -rf /var/lib/apt/lists/*
-
-# Use tini as the entrypoint
-ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["python3", "/app/movarr.py"]
+CMD ["python", "./movarr.py"]

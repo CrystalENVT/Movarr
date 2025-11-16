@@ -31,7 +31,7 @@ def local_cache_check(current_working_dir: str, media_id: str, debug: bool = Fal
             cache_toml_string = cache_file.read()
 
         toml_cache_contents = toml.loads(cache_toml_string)
-        debug_print('[LCC] - Toml Cache Contents\n{}'.format(toml_cache_contents), debug)
+        debug_print('[LCC] - Toml Cache Contents\n\t[LCC] - {}'.format(toml_cache_contents), debug)
         is_cached = True
 
         # Put cache contents in variables to work with

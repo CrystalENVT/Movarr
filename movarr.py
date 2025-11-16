@@ -13,6 +13,7 @@ from debug_print import debug_print
 # External Imports
 import os
 import pycron
+import requests
 import signal
 import time
 
@@ -101,6 +102,12 @@ if 'DEBUG' in os.environ and os.getenv('DEBUG') == "true":
 # setup headers for tmdb api calls
 headers = {"Authorization": "Bearer {}".format(os.getenv('tmdb_v4_read_access_token'))}
 
+# Quick call to the API just to validate the Token
+tmdb_status_code = requests.get('https://api.themoviedb.org/3/configuration',headers=headers).status_code
+if tmdb_status_code != 200:
+    print('>>>> Check TMDB Authorization Token - API call failed')
+    sys.exit()
+
 if not 'run_schedule' in os.environ:
     print('>>>> run_schedule environment variable is required')
     sys.exit()
@@ -122,7 +129,10 @@ if __name__ == '__main__':
                         continue
                     process_media(headers, current_input_dir, i, DEBUG_FLAG)
 
-            time.sleep(60) # prevent running multiple times in 1 minute
             print('>>>>> Movarr - done processing batch', flush=True)
+            for i in range (1, 60):
+                if killer.kill_now:
+                    sys.exit();
+                time.sleep(1) # prevent running multiple times in 1 minute
         else:
             time.sleep(1)

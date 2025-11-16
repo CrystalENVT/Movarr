@@ -6,11 +6,8 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN for artifact attestation
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+env:
+ BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
 
 jobs:
   pytest:
@@ -76,5 +73,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
+        tags: crystalenvt/movarr:${{ env.BRANCH_NAME }},crystalenvt/movarr:${{ env.BRANCH_NAME }}-${{ github.sha }}

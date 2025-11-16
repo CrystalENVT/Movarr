@@ -88,7 +88,7 @@ print("\n" +
 "#  \\__|     \\__| \\______/    \\_/    \\_______|\\__|      \\__|        #\n"+
 "#                                                                  #\n"+
 "####################################################################\n"+
-"\n")
+"\n", flush=True)
 
 # key-value pairs from .env get loaded into the os environment
 load_dotenv()
@@ -105,7 +105,7 @@ if not 'run_schedule' in os.environ:
     print('>>>> run_schedule environment variable is required')
     sys.exit()
 
-print(">>>> Movarr is initialized, starting monitor:")
+print(">>>> Movarr is initialized, starting monitor:", flush=True)
 
 if __name__ == '__main__':
     killer = GracefulKiller()
@@ -123,5 +123,6 @@ if __name__ == '__main__':
                     process_media(headers, current_input_dir, i, DEBUG_FLAG)
 
             time.sleep(60) # prevent running multiple times in 1 minute
+            print('>>>>> Movarr - done processing batch', flush=True)
         else:
             time.sleep(1)

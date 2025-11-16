@@ -1,39 +1,36 @@
-name: Publish Docker image on GitHub Release
+name: Build and release Docker images
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*.*.*'
 
 jobs:
-  push_to_registry:
-    name: Push Docker image to Docker Hub
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-      attestations: write
-      id-token: write
     steps:
-      - name: Check out the repo
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
-
-      - name: Log in to Docker Hub
-        uses: docker/login-action@28fdb31ff34708d19615a74d67103ddc2ea9725c
+      - uses: actions/checkout@v2
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          fetch-depth: 1
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@8d8c7c12f7b958582a5cb82ba16d5903cb27976a
+      - name: Build Docker image
+        uses: flownative/action-docker-build@master
         with:
-          images: crystalenvt/movarr
+          tag_ref: ${{ github.ref }}
+          image_name: flownative/docker-base/base
+          registry_password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image
-        id: push
-        uses: docker/build-push-action@9e436ba9f2d7bcd1d038c8e55d039d37896ddc5d
+      - name: Publish release to docker.io
+        uses: flownative/action-docker-publish-semver@master
         with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tag_ref: ${{ github.ref }}
+          tag_latest: 'yes'
+
+          source_image_name: docker.pkg.github.com/flownative/docker-base/base
+          source_registry_username: github
+          source_registry_password: ${{ secrets.GITHUB_TOKEN }}
+          source_registry_endpoint: https://docker.pkg.github.com/v2/
+
+          target_image_name: flownative/base
+          target_registry_username: ${{ vars.DOCKERHUB_USERNAME }}
+          target_registry_password: ${{ secrets.DOCKERHUB_TOKEN }}
+          target_registry_endpoint: https://index.docker.io/v1/

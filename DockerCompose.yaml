@@ -1,0 +1,20 @@
+services:
+  movarr:
+    image: crystalenvt/movarr:v1
+    container_name: movarr
+    restart: unless-stopped
+    environment:
+      PUID: 1000
+      PGID: 1000
+      tmdb_v4_read_access_token: ${tmdb_v4_read_access_token}
+      run_schedule: ${run_schedule}
+      input_directories: ${input_directories}
+      movie_output_directory: ${movie_output_directory}
+      tv_output_directory: ${tv_output_directory}
+      anime_movie_output_directory: ${anime_movie_output_directory}
+      anime_tv_output_directory: ${anime_tv_output_directory}
+      include_specials: ${include_specials}
+      DEBUG: ${DEBUG}
+    volumes:
+      - ${docker_mount_point}:/data
+networks: {}

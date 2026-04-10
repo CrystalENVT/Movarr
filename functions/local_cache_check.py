@@ -68,13 +68,16 @@ def local_cache_check(current_working_dir: str, media_id: str, debug: bool = Fal
                 number_of_episodes = len(os.listdir('{}/{}'.format(current_working_dir, i)))
                 debug_print('[LCC] - Number of episodes for Season {}: {}'.format(season_number, number_of_episodes), debug)
 
-                if number_of_episodes == episodes_per_season[str(season_number)]:
-                    debug_print('[LCC] - Episode Count matches', debug)
-                    continue
-                else:
-                    debug_print('[LCC] - Episode Count does not match', debug)
-                    is_complete = False
-                    return {'is_cached': is_cached, 'is_complete': is_complete}
+                try:
+                    if number_of_episodes == episodes_per_season[str(season_number)]:
+                        debug_print('[LCC] - Episode Count matches', debug)
+                        continue
+                    else:
+                        debug_print('[LCC] - Episode Count does not match', debug)
+                        is_complete = False
+                        return {'is_cached': is_cached, 'is_complete': is_complete}
+                except:
+                    print('[LCC] - Error while checking number of episodes in season {} \n TMDBID: {} \n episodes_per_season data: {}'.format(season_number, media_id, episodes_per_season))
         move_media_folder(current_working_dir, 'tv', media_is_anime)
 
         return {'is_cached': is_cached, 'is_complete': is_complete}
